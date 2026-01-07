@@ -7,7 +7,8 @@ import { Project, ProjectCard } from "./_components/project-card";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "A showcase of my projects and work in full-stack development.",
+  description:
+    "Selected projects and real-world work showcasing my experience in full-stack web development and software engineering.",
 };
 
 const Work = async () => {

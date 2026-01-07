@@ -10,7 +10,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with me for collaborations or just to say hello.",
+  description:
+    "Get in touch to discuss collaborations, projects, or opportunities in web development and software engineering.",
 };
 
 const Contact = () => {

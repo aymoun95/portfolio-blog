@@ -8,7 +8,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Read my latest thoughts and tutorials on web development.",
+  description:
+    "Technical articles, tutorials, and deep dives on web development, React, Next.js, and modern software engineering.",
 };
 
 export default async function BlogPage() {

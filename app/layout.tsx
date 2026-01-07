@@ -13,21 +13,36 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.METABASE_URL || "http://localhost:3000"),
-  title: {
-    default: "Portfolio Blog - Aymen Ben Zlouia",
-    template: "%s | Aymen Ben Zlouia",
-  },
-  description: "A blog about web development, programming, and technology.",
 
-  keywords: ["web development", "technology", "blog"],
+  title: {
+    default: "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
+    template: "%s | Aymen Ben Zlaouia",
+  },
+
+  description:
+    "Explore web development, modern programming, and scalable software architecture. Follow Aymen Ben Zlaouia for practical insights on React, Next.js, and real-world software engineering best practices.",
+
+  keywords: [
+    "software engineer",
+    "web development",
+    "technical blog",
+    "React",
+    "Next.js",
+    "frontend engineering",
+    "fullstack development",
+    "modern web technologies",
+  ],
+
   openGraph: {
     title: {
-      default: "Portfolio Blog - Aymen Ben Zlouia",
-      template: "%s | Aymen Ben Zlouia",
+      default:
+        "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
+      template: "%s | Aymen Ben Zlaouia",
     },
-    description: "A blog about web development, programming, and technology.",
+    description:
+      "Explore web development, modern programming, and scalable software architecture. Practical insights on React, Next.js, and real-world software engineering.",
     url: process.env.METABASE_URL || "http://localhost:3000",
-    siteName: "Portfolio Blog - Aymen Ben Zlouia",
+    siteName: "Technical Blog | Aymen Ben Zlaouia",
     locale: "en_US",
     type: "website",
     images: [
@@ -38,12 +53,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     title: {
-      default: "Portfolio Blog - Aymen Ben Zlaouia",
+      default:
+        "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
       template: "%s | Aymen Ben Zlaouia",
     },
-    description: "A blog about web development, programming, and technology.",
+    description:
+      "Practical insights on web development, React, Next.js, and modern software engineering by Aymen Ben Zlaouia.",
     card: "summary_large_image",
     images: [
       {
@@ -53,6 +71,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   robots: {
     index: true,
     follow: true,
