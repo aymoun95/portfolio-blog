@@ -21,7 +21,10 @@ export const metadata: Metadata = {
 
   keywords: ["web development", "technology", "blog"],
   openGraph: {
-    title: "Portfolio Blog - Aymen Ben Zlouia",
+    title: {
+      default: "Portfolio Blog - Aymen Ben Zlouia",
+      template: "%s | Aymen Ben Zlouia",
+    },
     description: "A blog about web development, programming, and technology.",
     url: process.env.METABASE_URL || "http://localhost:3000",
     siteName: "Portfolio Blog - Aymen Ben Zlouia",
@@ -36,7 +39,10 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "Portfolio Blog - Aymen Ben Zlouia",
+    title: {
+      default: "Portfolio Blog - Aymen Ben Zlouia",
+      template: "%s | Aymen Ben Zlouia",
+    },
     description: "A blog about web development, programming, and technology.",
     card: "summary_large_image",
     images: [
