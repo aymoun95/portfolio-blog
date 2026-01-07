@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "Selected projects and real-world work showcasing my experience in full-stack web development and software engineering.",
+  openGraph: {
+    title: "Work",
+  },
+  twitter: {
+    title: "Work",
+  },
 };
 
 const Work = async () => {

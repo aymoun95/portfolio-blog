@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch to discuss collaborations, projects, or opportunities in web development and software engineering.",
+  openGraph: {
+    title: "Contact",
+  },
+  twitter: {
+    title: "Contact",
+  },
 };
 
 const Contact = () => {

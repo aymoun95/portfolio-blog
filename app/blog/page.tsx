@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Technical articles, tutorials, and deep dives on web development, React, Next.js, and modern software engineering.",
+  openGraph: {
+    title: "Blog",
+  },
+  twitter: {
+    title: "Blog",
+  },
 };
 
 export default async function BlogPage() {

@@ -13,12 +13,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.METABASE_URL || "http://localhost:3000"),
-
   title: {
     default: "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
     template: "%s | Aymen Ben Zlaouia",
   },
-
   description:
     "Explore web development, modern programming, and scalable software architecture. Follow Aymen Ben Zlaouia for practical insights on React, Next.js, and real-world software engineering best practices.",
 
