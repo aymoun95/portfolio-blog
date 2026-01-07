@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Aymen Ben Zlouia",
   },
   description: "A blog about web development, programming, and technology.",
+
   keywords: ["web development", "technology", "blog"],
   openGraph: {
     title: "Portfolio Blog - Aymen Ben Zlouia",
@@ -26,6 +27,25 @@ export const metadata: Metadata = {
     siteName: "Portfolio Blog - Aymen Ben Zlouia",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/thumbnail.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    title: "Portfolio Blog - Aymen Ben Zlouia",
+    description: "A blog about web development, programming, and technology.",
+    card: "summary_large_image",
+    images: [
+      {
+        url: "/images/thumbnail.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   robots: {
     index: true,
