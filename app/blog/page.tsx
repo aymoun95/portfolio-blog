@@ -1,20 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { BlogCard } from "./_components/blog-card";
-
 import { Metadata } from "next";
+import Link from "next/link";
+import { shared_open_graph, shared_twitter } from "../layout";
+import { BlogCard } from "./_components/blog-card";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Technical articles, tutorials, and deep dives on web development, React, Next.js, and modern software engineering.",
+    "Technical articles, tutorials, and deep dives on web development and modern software engineering.",
   openGraph: {
-    title: "Blog",
+    title: "Blog | Aymen Ben Zlaouia",
+    description:
+      "Technical articles, tutorials, and deep dives on web development and modern software engineering.",
+    ...shared_open_graph,
   },
   twitter: {
-    title: "Blog",
+    title: "Blog | Aymen Ben Zlaouia",
+    description:
+      "Technical articles, tutorials, and deep dives on web development and modern software engineering.",
+    ...shared_twitter,
   },
 };
 

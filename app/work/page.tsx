@@ -3,6 +3,7 @@ import { getAllFiles } from "@/lib/file";
 import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { shared_open_graph, shared_twitter } from "../layout";
 import { Project, ProjectCard } from "./_components/project-card";
 
 export const metadata: Metadata = {
@@ -10,10 +11,16 @@ export const metadata: Metadata = {
   description:
     "Selected projects and real-world work showcasing my experience in full-stack web development and software engineering.",
   openGraph: {
-    title: "Work",
+    title: "Work | Aymen Ben Zlaouia",
+    description:
+      "Selected projects and real-world work showcasing my experience in full-stack web development and software engineering.",
+    ...shared_open_graph,
   },
   twitter: {
-    title: "Work",
+    title: "Work | Aymen Ben Zlaouia",
+    description:
+      "Selected projects and real-world work showcasing my experience in full-stack web development and software engineering.",
+    ...shared_twitter,
   },
 };
 

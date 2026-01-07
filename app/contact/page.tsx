@@ -1,22 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+import { shared_open_graph, shared_twitter } from "../layout";
 import { ContactInfo } from "./_components/contact-info";
 import { SendMessage } from "./_components/send-message";
 import { WorkTogether } from "./_components/work-together";
-
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch to discuss collaborations, projects, or opportunities in web development and software engineering.",
   openGraph: {
-    title: "Contact",
+    title: "Contact | Aymen Ben Zlaouia",
+    description:
+      "Get in touch to discuss collaborations, projects, or opportunities in web development and software engineering.",
+    ...shared_open_graph,
   },
   twitter: {
-    title: "Contact",
+    title: "Contact | Aymen Ben Zlaouia",
+    description:
+      "Get in touch to discuss collaborations, projects, or opportunities in web development and software engineering.",
+    ...shared_twitter,
   },
 };
 

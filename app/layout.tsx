@@ -11,6 +11,31 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const shared_open_graph = {
+  url: process.env.METABASE_URL || "http://localhost:3000",
+  siteName: "Technical Blog | Aymen Ben Zlaouia",
+  locale: "en_US",
+  type: "website",
+  images: [
+    {
+      url: "/images/thumbnail.png",
+      width: 1200,
+      height: 630,
+    },
+  ],
+};
+
+export const shared_twitter = {
+  card: "summary_large_image",
+  images: [
+    {
+      url: "/images/thumbnail.png",
+      width: 1200,
+      height: 630,
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.METABASE_URL || "http://localhost:3000"),
   title: {
@@ -32,42 +57,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: {
-      default:
-        "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
-      template: "%s | Aymen Ben Zlaouia",
-    },
+    title: "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
     description:
       "Explore web development, modern programming, and scalable software architecture. Practical insights on React, Next.js, and real-world software engineering.",
-    url: process.env.METABASE_URL || "http://localhost:3000",
-    siteName: "Technical Blog | Aymen Ben Zlaouia",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/images/thumbnail.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    ...shared_open_graph,
   },
 
   twitter: {
-    title: {
-      default:
-        "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
-      template: "%s | Aymen Ben Zlaouia",
-    },
+    title: "Software Engineer Portfolio & Technical Blog | Aymen Ben Zlaouia",
     description:
       "Practical insights on web development, React, Next.js, and modern software engineering by Aymen Ben Zlaouia.",
-    card: "summary_large_image",
-    images: [
-      {
-        url: "/images/thumbnail.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    ...shared_twitter,
   },
 
   robots: {

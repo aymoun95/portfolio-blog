@@ -54,7 +54,11 @@ export const BlogCard = ({ post }: { post: BlogPost }) => {
             </Badge>
           ))}
         </div>
-        <Link href={`/blog/${post.slug}`} className="w-full sm:w-auto">
+        <Link
+          href={`/blog/${post.slug}`}
+          aria-label={post.title}
+          className="w-full sm:w-auto"
+        >
           <Button variant="outline" size="sm" className="w-full">
             Read More
           </Button>
