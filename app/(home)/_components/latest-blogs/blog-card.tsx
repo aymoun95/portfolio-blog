@@ -33,9 +33,11 @@ export const BlogCard = ({ post }: BlogCardProps) => {
       <CardFooter className="justify-end mt-auto">
         <Link
           href={`/blog/${post.slug}`}
-          className="text-primary hover:underline   "
+          className="text-primary hover:underline"
+          aria-label={`Read more about ${post.title}`}
         >
           Read more
+          <span className="sr-only">Read more about {post.title}</span>
         </Link>
       </CardFooter>
     </Card>
