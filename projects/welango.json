@@ -1,0 +1,19 @@
+{
+  "title": "Welango App",
+  "subTitle": " An app to learn new languages",
+  "description": "Welango is an app that allows you to practice foreign languages through conversations (video and audio) as if you were traveling. Participate in language exchanges, when you want, where you want.",
+  "image": "/images/work/welango.png",
+  "liveUrl": "https://www.instagram.com/welangoapp/",
+  "featured": false,
+  "technologies": [
+    "react",
+    "react-native",
+    "node.js",
+    "express",
+    "graphql",
+    "firebase",
+    "apple",
+    "android",
+    "twilio"
+  ]
+}

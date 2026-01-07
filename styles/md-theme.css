@@ -1,0 +1,193 @@
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+.dark {
+  pre:has(.hljs),
+  .hljs {
+    background: #23241f;
+    color: #f8f8f2;
+  }
+
+  .hljs-tag,
+  .hljs-subst {
+    color: #f8f8f2;
+  }
+
+  .hljs-strong,
+  .hljs-emphasis {
+    color: #a8a8a2;
+  }
+
+  .hljs-bullet,
+  .hljs-quote,
+  .hljs-number,
+  .hljs-regexp,
+  .hljs-literal,
+  .hljs-link {
+    color: #ae81ff;
+  }
+
+  .hljs-code,
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-class {
+    color: #a6e22e;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-name,
+  .hljs-attr {
+    color: #f92672;
+  }
+
+  .hljs-symbol,
+  .hljs-attribute {
+    color: #66d9ef;
+  }
+
+  .hljs-params,
+  .hljs-title.class_,
+  .hljs-class .hljs-title {
+    color: #f8f8f2;
+  }
+
+  .hljs-string,
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-selector-id,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-variable {
+    color: #e6db74;
+  }
+
+  .hljs-comment,
+  .hljs-deletion,
+  .hljs-meta {
+    color: #75715e;
+  }
+}
+/*!
+  Theme: StackOverflow Light
+  Description: Light theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+*/
+
+pre:has(.hljs),
+.hljs {
+  color: #2f3337;
+  background: #f6f6f6;
+}
+
+.hljs-subst {
+  color: #2f3337;
+}
+
+.hljs-comment {
+  color: #656e77;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag,
+.hljs-section {
+  color: #015692;
+}
+
+.hljs-attr {
+  color: #015692;
+}
+
+.hljs-attribute {
+  color: #803378;
+}
+
+.hljs-name,
+.hljs-type,
+.hljs-number,
+.hljs-selector-id,
+.hljs-quote,
+.hljs-template-tag {
+  color: #b75501;
+}
+
+.hljs-selector-class {
+  color: #015692;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr {
+  color: #54790d;
+}
+
+.hljs-meta,
+.hljs-selector-pseudo {
+  color: #015692;
+}
+
+.hljs-built_in,
+.hljs-title,
+.hljs-literal {
+  color: #b75501;
+}
+
+.hljs-bullet,
+.hljs-code {
+  color: #535a60;
+}
+
+.hljs-meta .hljs-string {
+  color: #54790d;
+}
+
+.hljs-deletion {
+  color: #c02d2e;
+}
+
+.hljs-addition {
+  color: #2f6f44;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.prose code::before,
+.prose code::after,
+p::before,
+p::after {
+  content: "" !important;
+}
+
+.prose li > p,
+.prose li {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

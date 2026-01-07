@@ -1,0 +1,18 @@
+{
+  "title": "Regiondo Platform",
+  "subTitle": "The all-in-one booking system made for tours, activities, and destinations",
+  "description": "Regiondo is a tour and activity booking software that lets you sell tickets online, manage bookings, and connect with leading OTAs so you can grow your business faster.",
+  "image": "/images/work/regiondo.png",
+  "liveUrl": "https://pro.regiondo.com/",
+  "featured": true,
+  "technologies": [
+    "react",
+    "typescript",
+    "node.js",
+    "nestjs",
+    "docker",
+    "kubernetes",
+    "microservices",
+    "microfrontend"
+  ]
+}

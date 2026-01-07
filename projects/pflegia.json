@@ -1,0 +1,16 @@
+{
+  "title": "Pflegia",
+  "subTitle": "A simpler, smarter way for nurses to find their next job.",
+  "description": "Pflegia streamlines the job search for nurses by connecting them directly with employers. Instead of applying endlessly, candidates receive tailored job offers and choose who they want to engage with. The platform is completely free for nurses.",
+  "image": "/images/work/pflegia.png",
+  "liveUrl": "https://pflegia.de",
+  "featured": false,
+  "technologies": [
+    "next.js",
+    "nestjs",
+    "postgresql",
+    "github actions",
+    "bullmq",
+    "graphql"
+  ]
+}

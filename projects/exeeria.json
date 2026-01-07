@@ -1,0 +1,17 @@
+{
+  "title": "Exeeria Platform",
+  "subTitle": " A platform to connect patient to doctor",
+  "description": "A platform that uses innovative technologies that facilitate the patient's communication with his doctor and follow his updated instructions to achieve the best treatment results and avoid complications.",
+  "image": "/images/work/exeeria.png",
+  "liveUrl": "https://exeeria.com/",
+  "featured": true,
+  "technologies": [
+    "angular",
+    "react-native",
+    "typescript",
+    "node.js",
+    "express",
+    "apple",
+    "android"
+  ]
+}

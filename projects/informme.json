@@ -1,0 +1,20 @@
+{
+  "title": "InformMe",
+  "subTitle": "Fully digital patient education, right on the smartphone.",
+  "description": "InformMe modernizes doctor–patient communication by replacing paper-based materials with a fully digital experience. Healthcare institutions save time and costs while giving staff more space to focus on what matters most: patient care.",
+  "image": "/images/work/informme.png",
+  "liveUrl": "https://home.informme.info/",
+  "featured": false,
+  "technologies": [
+    "vue.js",
+    "nuxt.js",
+    "bun",
+    "hono",
+    "aws lambda",
+    "aws s3",
+    "dynamodb",
+    "aws sqs",
+    "docker",
+    "github actions"
+  ]
+}
