@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Aymen Ben Zlouia",
   },
   description: "A blog about web development, programming, and technology.",
+  keywords: ["web development", "technology", "blog"],
   openGraph: {
     title: "Portfolio Blog - Aymen Ben Zlouia",
     description: "A blog about web development, programming, and technology.",

@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Blog - Aymen Ben Zlouia
 
-## Getting Started
+A modern, high-performance personal portfolio and technical blog built with **Next.js 16**, **React 19**, and **MDX**. This project focuses on developer experience, SEO, and a premium aesthetic with dynamic themes.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![pnpm](https://img.shields.io/badge/pnpm-9-orange?style=flat-square&logo=pnpm)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
+
+- **📝 MDX-Powered Blog**: Write articles in standard Markdown with frontmatter support.
+  - Syntax highlighting via `rehype-highlight`.
+  - GitHub Flavored Markdown (GFM) support.
+  - Automatic reading time calculation.
+- **🎨 Dynamic Design System**:
+  - Dark and Light mode support using `next-themes`.
+  - Custom **Color Theme** system to personalize the UI accent colors.
+  - Responsive navigation and modern typography.
+- **🚀 SEO & Meta**:
+  - Dynamically generated `sitemap.xml` and `robots.txt`.
+  - Automatic OpenGraph, Twitter cards, and meta tags for every blog post.
+- **✉️ Contact Integration**: functional contact form powered by **Resend**.
+- **📂 Portfolio Showcase**: Centralized project management in `data.ts`.
+- **⚡ Performance**: Built with Next.js App Router for optimal loading times and Core Web Vitals.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Runtime**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [Radix UI](https://www.radix-ui.com/) & [Lucide Icons](https://lucide.dev/)
+- **Content**: [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
+- **Email**: [Resend](https://resend.com/)
+- **Forms**: React Hook Form & Zod
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [pnpm](https://pnpm.io/) installed.
+- Node.js 18.17 or later.
+
+### Installation
+
+1.  Clone the repository:
+
+    ```bash
+    git clone <repository-url>
+    cd blog
+    ```
+
+2.  Install dependencies:
+
+    ```bash
+    pnpm install
+    ```
+
+3.  Configure environment variables:
+    Create a `.env.local` file in the root directory:
+
+    ```env
+    METABASE_URL="http://localhost:3000"
+    RESEND_API_KEY="your_resend_api_key_here"
+    ```
+
+4.  Run the development server:
+    ```bash
+    pnpm dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+├── actions/            # Server actions (e.g., Email sending)
+├── app/                # Next.js App Router (pages and layouts)
+├── articles/           # Markdown (.md) blog posts
+├── components/         # Reusable UI and web components
+├── context/            # React Context providers (Theme, ColorTheme)
+├── lib/                # Utility functions and MDX processing
+├── public/             # Static assets
+├── schemas/            # Zod validation schemas
+└── data.ts             # Centralized projects data
+```
 
-## Learn More
+## 📝 Adding New Posts
 
-To learn more about Next.js, take a look at the following resources:
+Simply add a new `.md` file to the `articles/` directory. Ensure it has the required frontmatter:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```markdown
+---
+title: "Your Post Title"
+publishedAt: "2024-01-01"
+summary: "A brief description of the post."
+tags: ["nextjs", "react"]
+image: "http://domain.com/image.png"
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Your content here...
+```
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is personal. Feel free to use it for inspiration or for your own portfolio.
