@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: {
-      default: "Portfolio Blog - Aymen Ben Zlouia",
-      template: "%s | Aymen Ben Zlouia",
+      default: "Portfolio Blog - Aymen Ben Zlaouia",
+      template: "%s | Aymen Ben Zlaouia",
     },
     description: "A blog about web development, programming, and technology.",
     card: "summary_large_image",
