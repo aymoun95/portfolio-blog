@@ -51,7 +51,7 @@ export function Navigation() {
                 <ColorThemeToggle />
                 <ThemeToggle />
                 <CollapsibleTrigger asChild>
-                  <Button variant="ghost" size="sm">
+                  <Button variant="ghost" size="sm" aria-label="Toggle menu">
                     {mobileMenuOpen ? (
                       <X className="h-5 w-5" />
                     ) : (

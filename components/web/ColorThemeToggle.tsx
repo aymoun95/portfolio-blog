@@ -65,7 +65,7 @@ export function ColorThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" aria-label="Toggle color theme">
           <Palette className="w-5 h-5" />
         </Button>
       </DropdownMenuTrigger>
