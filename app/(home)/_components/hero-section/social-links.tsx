@@ -6,11 +6,7 @@ export const SocialLinks = () => {
   return (
     <>
       <div className="flex justify-center gap-4 mb-12">
-        <Button
-          asChild
-          size="lg"
-          className="gap-2 font-semibold dark:bg-purple-600"
-        >
+        <Button asChild size="lg" className="gap-2 font-semibold">
           <a
             href="https://aymen-ben-zlaouia.netlify.app/"
             target="_blank"
