@@ -1,5 +1,4 @@
 import { Toaster } from "@/components/ui/sonner";
-import { Navigation } from "@/components/web/Navigation";
 import ColorThemeProvider from "@/context/color-theme-provider";
 import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";
@@ -98,10 +97,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ColorThemeProvider>
-            <Navigation />
-            <main className="max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
-              {children}
-            </main>
+            {children}
             <Toaster closeButton />
           </ColorThemeProvider>
         </ThemeProvider>

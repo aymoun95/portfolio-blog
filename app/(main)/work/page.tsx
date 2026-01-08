@@ -1,9 +1,9 @@
+import { shared_open_graph, shared_twitter } from "@/app/layout";
 import { Button } from "@/components/ui/button";
 import { getAllFiles } from "@/lib/file";
 import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { shared_open_graph, shared_twitter } from "../layout";
 import { Project, ProjectCard } from "./_components/project-card";
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
+import { shared_open_graph, shared_twitter } from "@/app/layout";
 import { Metadata } from "next";
-import { shared_open_graph, shared_twitter } from "../layout";
 import { HeroSection } from "./_components/hero-section";
 import { LatestBlogs } from "./_components/latest-blogs";
 

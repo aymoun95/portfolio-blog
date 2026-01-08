@@ -1,9 +1,9 @@
+import { shared_open_graph, shared_twitter } from "@/app/layout";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { shared_open_graph, shared_twitter } from "../layout";
 import { ContactInfo } from "./_components/contact-info";
 import { SendMessage } from "./_components/send-message";
 import { WorkTogether } from "./_components/work-together";
