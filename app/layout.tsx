@@ -1,3 +1,4 @@
+import FaviconUpdater from "@/components/favicon-updater";
 import { Toaster } from "@/components/ui/sonner";
 import ColorThemeProvider from "@/context/color-theme-provider";
 import { ThemeProvider } from "@/context/theme-provider";
@@ -97,6 +98,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ColorThemeProvider>
+            <FaviconUpdater />
             {children}
             <Toaster closeButton />
           </ColorThemeProvider>

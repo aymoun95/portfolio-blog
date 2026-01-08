@@ -12,7 +12,7 @@ export interface ThemeColorStateParams {
   setThemeColor: React.Dispatch<React.SetStateAction<ThemeColors>>;
 }
 
-const themes = {
+export const themes = {
   Purple: {
     light: {
       background: "0 0% 100%",
