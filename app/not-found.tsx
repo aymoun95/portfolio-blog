@@ -10,12 +10,15 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <main className="min-h-[70vh] flex items-center px-4 py-12 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <main className="min-h-screen flex items-center px-4 py-12 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       <div className="w-full space-y-6 text-center">
         <div className="space-y-3">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl animate-bounce">
-            404
-          </h1>
+          <h2 className="mb-6 text-5xl font-semibold animate-bounce">
+            Whoops!
+          </h2>
+          <h3 className="mb-1.5 text-3xl font-semibold">
+            Something went wrong
+          </h3>
           <p className="text-gray-500">
             Looks like you've ventured into the unknown digital realm.
           </p>
