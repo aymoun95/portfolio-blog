@@ -24,13 +24,19 @@ export default function FaviconUpdater() {
     const blob = new Blob([svg], { type: "image/svg+xml" });
     const url = URL.createObjectURL(blob);
 
-    document.querySelectorAll("link[rel*='icon']").forEach((el) => el.remove());
+    const existingLinks =
+      document.querySelectorAll<HTMLLinkElement>("link[rel*='icon']");
 
-    let link = document.querySelector<HTMLLinkElement>("link[rel~='icon']");
-    link = document.createElement("link");
-    link.rel = "icon";
-    link.href = url;
-    document.head.appendChild(link);
+    if (existingLinks.length > 0) {
+      existingLinks.forEach((link) => {
+        link.href = url;
+      });
+    } else {
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.href = url;
+      document.head.appendChild(link);
+    }
 
     return () => {
       URL.revokeObjectURL(url);
