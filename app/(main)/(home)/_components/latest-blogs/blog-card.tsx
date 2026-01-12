@@ -22,9 +22,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
   return (
     <Card key={post.slug} className="hover:shadow-md  transition-shadow">
       <CardHeader className="pb-3">
-        <CardDescription className="ml-auto">
-          {post.publishedAt}
-        </CardDescription>
+        <CardDescription>{post.publishedAt}</CardDescription>
         <CardTitle className="text-xl">{post.title}</CardTitle>
       </CardHeader>
       <CardContent>

@@ -1,5 +1,4 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { getFileBySlug, getFiles } from "@/lib/mdx";
 import "@/styles/md-theme.css";
 import { ArrowLeft } from "lucide-react";
@@ -50,13 +49,13 @@ export default async function PostPage({ params }: PostPageProps) {
         <ArrowLeft className="size-4" />
         Back to blog
       </Link>
-      <div className="space-y-4 flex flex-col md:flex-row justify-between items-center space-x-4 mb-8">
-        <h1 className="text-4xl font-bold tracking-tight text-foreground  mb-0">
+      <div className="flex flex-col md:flex-row justify-between items-center space-x-4 mb-8">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground  mb-0 text-center md:text-left">
           {frontMatter.title}
         </h1>
-        <div className="flex items-center shrink-0">
-          <p className="text-sm text-muted-foreground">
-            {frontMatter.readTime} •
+        <div className="flex items-center shrink-0 ">
+          <p className="text-sm text-muted-foreground text-center">
+            {frontMatter.readTime} •1
             {new Date(frontMatter.publishedAt).toLocaleDateString()}
           </p>
         </div>
@@ -64,8 +63,6 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="mx-auto w-full px-2.5 md:px-20">
         <article className="prose dark:prose-invert">{content}</article>
       </div>
-
-      <Separator className="my-8" />
     </div>
   );
 }
