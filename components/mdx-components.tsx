@@ -1,3 +1,4 @@
+import VideoPlayer from "@/components/video-player";
 import Link from "next/link";
 import React from "react";
 
@@ -242,6 +243,7 @@ const MDXComponents = {
 
   hr: Hr,
   br: () => <br className="h-6" />,
+  Video: (props: any) => <VideoPlayer {...props} />,
 };
 
 export default MDXComponents;
