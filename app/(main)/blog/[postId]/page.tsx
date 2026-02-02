@@ -4,6 +4,7 @@ import "@/styles/md-theme.css";
 import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface PostPageProps {
   params: Promise<{ postId: string }>;
@@ -13,7 +14,15 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const { postId } = await params;
-  const { frontMatter } = await getFileBySlug(postId);
+  const post = await getFileBySlug(postId);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  const { frontMatter } = post;
 
   return {
     title: frontMatter.title,
@@ -38,7 +47,13 @@ export async function generateMetadata({
 
 export default async function PostPage({ params }: PostPageProps) {
   const { postId } = await params;
-  const { frontMatter, content } = await getFileBySlug(postId);
+  const post = await getFileBySlug(postId);
+
+  if (!post) {
+    notFound();
+  }
+
+  const { frontMatter, content } = post;
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 relative">

@@ -23,10 +23,13 @@ export async function getFiles(dir: string) {
 }
 
 export async function getFileBySlug(slug: string) {
-  const source = fs.readFileSync(
-    path.join(root, "articles", `${slug}.md`),
-    "utf8"
-  );
+  const filePath = path.join(root, "articles", `${slug}.md`);
+
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+
+  const source = fs.readFileSync(filePath, "utf8");
 
   const { frontmatter, content } = await compileMDX<Frontmatter>({
     source,
@@ -60,7 +63,7 @@ export async function getAllFilesFrontMatter() {
     files.map(async (postSlug) => {
       const source = fs.readFileSync(
         path.join(root, "articles", postSlug),
-        "utf8"
+        "utf8",
       );
       const { frontmatter } = await compileMDX<Frontmatter>({
         source,
@@ -73,6 +76,6 @@ export async function getAllFilesFrontMatter() {
         readTime: readingTime(source).text,
         slug: postSlug.replace(".md", ""),
       };
-    })
+    }),
   );
 }
