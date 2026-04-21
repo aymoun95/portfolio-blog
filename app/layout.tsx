@@ -2,6 +2,7 @@ import FaviconUpdater from "@/components/favicon-updater";
 import { Toaster } from "@/components/ui/sonner";
 import ColorThemeProvider from "@/context/color-theme-provider";
 import { ThemeProvider } from "@/context/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -91,6 +92,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable}  antialiased`}>
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -99,6 +101,7 @@ export default function RootLayout({
         >
           <ColorThemeProvider>
             <FaviconUpdater />
+
             {children}
             <Toaster closeButton />
           </ColorThemeProvider>
