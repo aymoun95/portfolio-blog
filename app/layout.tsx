@@ -1,3 +1,4 @@
+import { FloatingAskButton } from "@/components/chat/floating-ask-button";
 import FaviconUpdater from "@/components/favicon-updater";
 import { Toaster } from "@/components/ui/sonner";
 import ColorThemeProvider from "@/context/color-theme-provider";
@@ -5,6 +6,7 @@ import { ThemeProvider } from "@/context/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// @ts-ignore: CSS module import handled by Next.js
 import "./globals.css";
 
 const inter = Inter({
@@ -103,6 +105,7 @@ export default function RootLayout({
             <FaviconUpdater />
 
             {children}
+            <FloatingAskButton />
             <Toaster closeButton />
           </ColorThemeProvider>
         </ThemeProvider>
