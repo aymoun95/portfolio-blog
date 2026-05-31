@@ -33,6 +33,8 @@ export class GeminiService extends AIService {
     const llm = new ChatGoogleGenerativeAI({
       model: this.generationModel,
       apiKey: process.env.GOOGLE_API_KEY!,
+      temperature: 0.3,
+      maxOutputTokens: 500,
     });
 
     const agent = createAgent({
