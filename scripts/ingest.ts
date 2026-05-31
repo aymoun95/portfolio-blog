@@ -1,8 +1,11 @@
+import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import * as dotenv from "dotenv";
 import * as fs from "fs";
 import * as path from "path";
 import { VectorEntry } from "../lib/rag/vectorStore";
 import { createAIService } from "../lib/services/factory";
+
 dotenv.config({ path: ".env.local" });
 
 async function main() {
@@ -16,26 +19,30 @@ async function main() {
   }
 
   const provider = process.env.LLM_PROVIDER || "google";
-  const embeddingModel = process.env.EMBEDDING_MODEL || "text-embedding-004";
 
   if (!process.env.GOOGLE_API_KEY && provider === "google") {
     console.error("❌ GOOGLE_API_KEY not set in .env.local");
     process.exit(1);
   }
 
+  const embeddingModel = process.env.EMBEDDING_MODEL;
+  if (!embeddingModel) {
+    console.error("❌ EMBEDDING_MODEL not set in .env.local");
+    process.exit(1);
+  }
+
   console.log("🚀 Loading PDF...");
-  const { PDFLoader } =
-    await import("@langchain/community/document_loaders/fs/pdf");
+
   const loader = new PDFLoader(pdfPath);
   const docs = await loader.load();
   console.log(`   Loaded ${docs.length} page(s)`);
 
   console.log("✂️  Chunking text...");
-  const { RecursiveCharacterTextSplitter } =
-    await import("@langchain/textsplitters");
+
   const splitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 500,
-    chunkOverlap: 50,
+    chunkSize: 800, // bigger chunks to keep Q&A pairs together
+    chunkOverlap: 100,
+    separators: ["###", "---", "\n\n", "\n"], // split on headings first
   });
   const chunks = await splitter.splitDocuments(docs);
   console.log(`   Created ${chunks.length} chunks`);

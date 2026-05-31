@@ -84,6 +84,9 @@ export default function AskPage() {
           </div>
         </div>
       </div>
+      <p className="relative z-10 -mt-2 pb-3 text-center text-xs text-muted-foreground">
+        No memory be precise and thorough with every question
+      </p>
 
       <div className="relative z-10 flex flex-1 flex-col overflow-y-auto px-1">
         {!hasMessages ? (
