@@ -3,10 +3,10 @@ interface SuggestionChipsProps {
 }
 
 const suggestions = [
-  "What projects did you build?",
-  "Tell me about your experience",
-  "What technologies do you use?",
-  "Show me your best work",
+  "What projects did he build?",
+  "Tell me about his experience",
+  "What technologies does he use?",
+  "Show me his best work",
 ];
 
 export function SuggestionChips({ onSelect }: SuggestionChipsProps) {
